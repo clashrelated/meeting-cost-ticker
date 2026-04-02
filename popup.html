@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Meeting Cost Ticker</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-left">
+      <img src="icons/icon48.svg" alt="MCT" class="header-icon">
+      <div class="header-title">Meeting Cost Ticker</div>
+    </div>
+    <span class="version-tag">v1.1.0</span>
+  </header>
+
+  <section class="section">
+    <div class="section-heading">Your Settings</div>
+    <div class="field">
+      <label for="team-size">Team size</label>
+      <input type="number" id="team-size" min="1" max="500" value="5">
+    </div>
+    <div class="field">
+      <label for="annual-salary">Average annual salary</label>
+      <input type="number" id="annual-salary" min="1000" value="60000">
+    </div>
+    <div class="field">
+      <label for="currency">Currency</label>
+      <select id="currency">
+        <option value="USD">USD — US Dollar</option>
+        <option value="EUR">EUR — Euro</option>
+        <option value="GBP">GBP — British Pound</option>
+        <option value="NPR">NPR — Nepalese Rupee</option>
+        <option value="INR">INR — Indian Rupee</option>
+        <option value="AUD">AUD — Australian Dollar</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>View mode</label>
+      <div class="mode-toggle">
+        <button class="mode-btn active" id="mode-company" data-mode="company">&#127970; Company</button>
+        <button class="mode-btn" id="mode-freelancer" data-mode="freelancer">&#128100; Freelancer</button>
+      </div>
+    </div>
+    <div class="calc-display">
+      <div class="calc-row">
+        <span class="calc-label">Hourly cost per person</span>
+        <span class="calc-value" id="hourly-per-person">$28.85</span>
+      </div>
+      <div class="calc-row">
+        <span class="calc-label">Per second (whole team)</span>
+        <span class="calc-value" id="per-second">$0.008</span>
+      </div>
+    </div>
+    <button class="btn-save" id="save-btn">Save Settings</button>
+    <div class="save-confirm" id="save-confirm">Settings saved!</div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading">This Week</div>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-value" id="stat-meetings">0</div>
+        <div class="stat-label">Meetings</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="stat-hours">0h</div>
+        <div class="stat-label">Total time</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="stat-cost">$0</div>
+        <div class="stat-label">Total cost</div>
+      </div>
+    </div>
+    <div class="week-bar-wrap">
+      <div class="week-bar-label">
+        <span>% of work week in meetings</span>
+        <span id="week-pct">0%</span>
+      </div>
+      <div class="week-bar-track">
+        <div class="week-bar-fill" id="week-bar-fill"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading-row">
+      <div class="section-heading">Recent Meetings</div>
+      <button class="btn-link" id="clear-history">Clear history</button>
+    </div>
+    <div id="history-list">
+      <div class="history-empty">No meetings recorded yet.</div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="https://chrome.google.com/webstore" target="_blank" rel="noopener noreferrer" class="footer-link">Rate this extension</a>
+      <span class="footer-sep">|</span>
+      <a href="https://github.com/tabkit/meeting-cost-ticker/issues" target="_blank" rel="noopener noreferrer" class="footer-link">Report a bug</a>
+      <span class="footer-sep">|</span>
+      <a href="https://tabkit.dev" target="_blank" rel="noopener noreferrer" class="footer-link">More tools by TabKit</a>
+    </div>
+    <a href="https://ko-fi.com/Y8Y0BW7ME" target="_blank" rel="noopener noreferrer" class="kofi-btn">
+      &#9749; Support me on Ko-fi
+    </a>
+    <div class="footer-made">Made with &#9829; by TabKit</div>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>

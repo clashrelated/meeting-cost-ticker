@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="bg" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#1e2a4a"/>
+      <stop offset="100%" stop-color="#0d0d1a"/>
+    </radialGradient>
+  </defs>
+  <circle cx="64" cy="64" r="62" fill="url(#bg)" stroke="#72a4f2" stroke-width="3"/>
+  <circle cx="64" cy="64" r="54" fill="none" stroke="#72a4f2" stroke-width="1" opacity="0.3" filter="url(#glow)"/>
+  <circle cx="64" cy="64" r="48" fill="none" stroke="#72a4f2" stroke-width="1.5" opacity="0.6"/>
+  <line x1="64" y1="18" x2="64" y2="24" stroke="#72a4f2" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+  <line x1="64" y1="104" x2="64" y2="110" stroke="#72a4f2" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+  <line x1="18" y1="64" x2="24" y2="64" stroke="#72a4f2" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+  <line x1="104" y1="64" x2="110" y2="64" stroke="#72a4f2" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+  <line x1="88" y1="21" x2="86" y2="26" stroke="#72a4f2" stroke-width="1.5" opacity="0.5"/>
+  <line x1="107" y1="40" x2="102" y2="42" stroke="#72a4f2" stroke-width="1.5" opacity="0.5"/>
+  <line x1="107" y1="88" x2="102" y2="86" stroke="#72a4f2" stroke-width="1.5" opacity="0.5"/>
+  <line x1="88" y1="107" x2="86" y2="102" stroke="#72a4f2" stroke-width="1.5" opacity="0.5"/>
+  <line x1="40" y1="107" x2="42" y2="102" stroke="#72a4f2" stroke-width="1.5" opacity="0.5"/>
+  <line x1="21" y1="88" x2="26" y2="86" stroke="#72a4f2" stroke-width="1.5" opacity="0.5"/>
+  <line x1="21" y1="40" x2="26" y2="42" stroke="#72a4f2" stroke-width="1.5" opacity="0.5"/>
+  <line x1="40" y1="21" x2="42" y2="26" stroke="#72a4f2" stroke-width="1.5" opacity="0.5"/>
+  <line x1="64" y1="64" x2="37" y2="32" stroke="#ffffff" stroke-width="5" stroke-linecap="round" filter="url(#glow)"/>
+  <line x1="64" y1="64" x2="91" y2="32" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="64" cy="64" r="5" fill="#72a4f2" filter="url(#glow)"/>
+  <text x="64" y="96" font-family="Arial, sans-serif" font-weight="bold" font-size="28" fill="#72a4f2" text-anchor="middle" filter="url(#glow)">$</text>
+</svg>
