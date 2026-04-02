@@ -4,3 +4,12 @@ Thumbs.db
 node_modules/
 .claude/
 *.log
+meeting-cost-ticker-extension.zip
+store/capture.js
+store/convert-icons.js
+store/marquee.html
+store/promo-tile.html
+store/screenshot-1.html
+store/screenshot-2.html
+store/screenshot-3.html
+store/store-listing.md
